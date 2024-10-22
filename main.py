@@ -1,8 +1,8 @@
 import argparse
 import os
-from femur_head_segmentator import FemurHeadSegmentator
-from femur_head_segmentator_types import FemurHeadResponse
-from joints_detector import JointsDetector
+from src.femur_head_segmentator import FemurHeadSegmentator
+from src.femur_head_segmentator_types import FemurHeadResponse
+from src.joints_detector import JointsDetector
 
 from dotenv import load_dotenv
 
