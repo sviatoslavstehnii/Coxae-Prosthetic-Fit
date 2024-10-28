@@ -1,0 +1,21 @@
+.custom-button {
+  margin-top: 2rem;
+  background-color: #007bff; /* Primary color */
+  color: #fff; /* Text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Top/bottom and left/right padding */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.2s; /* Transition for hover effects */
+}
+
+.custom-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.custom-button:active {
+  transform: scale(0.95); /* Slightly shrink the button on click */
+}
