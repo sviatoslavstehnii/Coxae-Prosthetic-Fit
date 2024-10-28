@@ -3,3 +3,6 @@ datasets
 runs
 venv
 .env
+app/client/.webpack
+app/client/node_modules
+app/client/out
