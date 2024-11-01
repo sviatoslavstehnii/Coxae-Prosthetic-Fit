@@ -18,8 +18,13 @@ class MainWidget(QMainWindow):
 
     def dropEvent(self, event):
         dropped_files = [u.toLocalFile() for u in event.mimeData().urls()]
-        obj = {"file": dropped_files[0]}
-        x = requests.post("http://127.0.0.1:8000/api/v1/process/", files = {"image": ("image.jpg", "")})
+        headers = {
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
+                        'Chrome/91.0.4472.124 Safari/537.36 '
+        }
+        with open(dropped_files[0], 'rb') as image:
+            files = {'file': image.read()}
+        x = requests.post("http://127.0.0.1:8000/uploadfile",headers=headers, files=files)
         print(x.text)
 
 
